@@ -27,7 +27,7 @@ while True:
         else:
             print("operação falhou! O Valor informado é invalido.")
 
-    elif opcao == "s"
+    elif opcao == "s":
         valor = float(input("Informe o valor do Saque: "))
 
         excedeu_saldo = valor > saldo
@@ -52,4 +52,15 @@ while True:
 
         else:
            print("Operação falhou! O valor informado é invalido.")
-                           
+
+    elif opcao == "e":
+        print("\n============== EXTRATO ==============")
+        print("Não foram realizados movimentações." if not extrato else extrato)
+        print(f"\nSaldo: R$ {saldo:.2f}")
+        print("=======================================")
+
+    elif opcao == "q":
+        break
+
+    else:
+        print("Opção invalida, por favor selecione novamente a operação desejada")                           
